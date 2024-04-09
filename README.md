@@ -19,7 +19,15 @@ Este desafio irá verificar se o candidato possuí as seguintes habilidades em u
 - O projeto foi criado utilizando o Nextjs
 - Foi configurado tailwind
 - A rota / exibe um hero, de acordo com o design escolhido, com pixel perfect
-- A rota /leads retorna um json com
+- A rota /job recebe um paramêtro chamado secret
+
+  - Caso não seja enviado o secret "naranja-labs" a rota /job deverá retornar um erro
+  - Caso o secret "naranja-labs" seja enviado, deverá retornar um json com a seguinte estrutura:
+
+    {
+    job: "Full-stack",
+    level: "Junior"
+    }
 
 ## Como deverá ser feito a entrega
 
