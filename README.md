@@ -30,6 +30,8 @@ Este desafio irá verificar se o candidato possuí as seguintes habilidades em u
   - Github
   - Telefone
   - Email
+- Quando finalizar, abra um PR da sua branch
+- OBS: Cuidado para não abrir PR da branch errada
 
 ## Dicas
 
@@ -37,3 +39,7 @@ Este desafio irá verificar se o candidato possuí as seguintes habilidades em u
 - Atente-se ao pixel perfect
 - Cuidado com commit bomba
 - Faça commits bem descritivos
+
+## Observações
+
+- Após a data final de entrega, nenhum novo commit será considerado
