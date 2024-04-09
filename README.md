@@ -30,6 +30,8 @@ Este desafio irá verificar se o candidato possuí as seguintes habilidades em u
   - Github
   - Telefone
   - Email
+- Quando finalizar, abra um PR da sua branch
+- OBS: Cuidado para não abrir PR da branch errada
 
 ## Dicas
 
