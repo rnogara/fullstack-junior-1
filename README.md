@@ -13,6 +13,7 @@ Este desafio irá verificar se o candidato possuí as seguintes habilidades em u
 
 - O candidato deverá escolher e desenvolver uma das heros sections dentro deste figma: https://encurtador.com.br/buzKZ
 - O candidato deverá desenvolver uma rota backend utilizando Nextjs
+- Tanto o front-end quanto o back-end devem ser feitos no mesmo projeto do Nextjs
 
 ## Requisitos técnico
 
