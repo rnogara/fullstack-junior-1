@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { IJob } from './interfaces';
 import { jobs } from './jobs';
 
-async function fetchJobs() {
+async function fetchJobs(): Promise<Response> {
     try {
         return new Response(JSON.stringify(jobs), {
             status: 200,
