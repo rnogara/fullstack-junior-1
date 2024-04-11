@@ -21,8 +21,13 @@ async function fetchJobs() {
     }
 }
 
-export async function GET(_req: NextRequest): Promise<NextResponse<IJob[]>> {
-  const response = await fetchJobs();
-  const jobs = await response.json();
-  return NextResponse.json(jobs);
+export async function GET(req: NextRequest): Promise<NextResponse<IJob[]>> {
+    const response = await fetchJobs();
+    const jobs = await response.json();
+    const query = req.nextUrl.searchParams.get('level') || null;
+    if (query) {
+        const filteredJobs = jobs.filter((job: IJob) => job.level === query);
+        return NextResponse.json(filteredJobs);
+    }
+    return NextResponse.json(jobs);
 }
