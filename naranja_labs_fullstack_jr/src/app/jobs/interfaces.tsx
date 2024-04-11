@@ -4,3 +4,7 @@ export interface IJob {
   level: 'Trainee' | 'Junior' | '' | 'Senior' | 'Master';
   status: 'open' | 'closed';
 }
+
+export interface IError {
+  error: string;
+}
