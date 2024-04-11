@@ -21,7 +21,18 @@ async function fetchJobs(): Promise<Response> {
     }
 }
 
+function authChecker(header: string | null): boolean {
+    if (!header) return false;
+    const token = header.split(' ')[1];
+    return token === process.env.API_SECRET;
+}
+
 export async function GET(req: NextRequest): Promise<NextResponse<IJob[] | IError>> {
+    const header = req.headers.get('Authorization');
+    if (!authChecker(header)) {
+        return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
     const response = await fetchJobs();
     const jobs = await response.json();
     const path = req.nextUrl.pathname;
