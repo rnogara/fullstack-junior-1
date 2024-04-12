@@ -39,6 +39,9 @@ body {
   .highlight-text {
     color: rgb(var(--foreground-rgb));
   }
+  .normal-text {
+    color: rgb(var(--text-color));
+  }
   .line {
     border-bottom: 1px solid rgb(var(--text-secondary));
   }
