@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { IError, IJob } from './interfaces';
-import { jobs } from './jobs';
+import { IError, IJob } from '../../interfaces';
+import { jobs } from '../../jobs';
 
 async function fetchJobs(): Promise<Response> {
     try {
@@ -21,23 +21,14 @@ async function fetchJobs(): Promise<Response> {
     }
 }
 
-function authChecker(header: string | null): boolean {
-    if (!header) return false;
-    const token = header.split(' ')[1];
-    return token === process.env.API_SECRET;
-}
-
 export async function GET(req: NextRequest): Promise<NextResponse<IJob[] | IError>> {
-    const header = req.headers.get('Authorization');
-    if (!authChecker(header)) {
-        return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
     const response = await fetchJobs();
     const jobs = await response.json();
-    const query = req.nextUrl.searchParams.get('level') || null;
-    if (query) {
-        const filteredJobs = jobs.filter((job: IJob) => job.level === query);
-        return NextResponse.json(filteredJobs);
+    const path = req.nextUrl.pathname;
+    const id = Number(path.split('/').pop());
+    if (!jobs.some((job: IJob) => job.id === id)) {
+        return NextResponse.json({ error: 'Job not found' }, { status: 404 });
     }
-    return NextResponse.json(jobs);
+    const filteredJobs = jobs.filter((job: IJob) => job.id === id);
+    return NextResponse.json(filteredJobs);
 }
