@@ -4,7 +4,7 @@ import CarIcon from "../../assets/icons/CarIcon.png"
 
 export default function SearchBar() {
     return (
-        <div className="relative flex flex-row justify-center items-center w-[1240px] h-[138px] bg-white border rounded-full -mt-[90px] z-40">
+        <div className="relative flex flex-row justify-center items-center w-[1240px] h-[138px] bg-white border rounded-full -mt-[90px] z-40 drop-shadow-search">
             <div className="flex flex-col justify-around items-start mr-8 w-[192px] h-[62px]">
                 <p className="text-secondary">Location</p>
                 <div className="flex flex-row items-center">
@@ -18,7 +18,7 @@ export default function SearchBar() {
                     <Image src={ CarIcon } alt="a car icon" className="w-5 h-4" />
                     <button className="flex flex-row justify-between items-center w-full text-[18px]/[27px] mt-1 font-medium ml-2">
                         City Car
-                        <svg className="-mr-1 ml-3 h-5 w-5 normal-text" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-12 h-5 w-5 normal-text" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" cap-rule="evenodd" />
                         </svg>
                     </button>
@@ -31,7 +31,7 @@ export default function SearchBar() {
                     <CalendarDaysIcon className="highlight-text w-6 h-6 stroke-2" />
                     <button className="flex flex-row justify-between items-center w-full text-[18px]/[27px] mt-1 font-medium ml-2">
                         17 July 2021
-                        <svg className="-mr-1 ml-3 h-5 w-5 normal-text" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-12 h-5 w-5 normal-text" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" cap-rule="evenodd" />
                         </svg>
                     </button>
@@ -43,7 +43,7 @@ export default function SearchBar() {
                     <CalendarDaysIcon className="highlight-text w-6 h-6 stroke-2" />
                     <button className="flex flex-row justify-between items-center w-full text-[18px]/[27px] mt-1 font-medium ml-2">
                         17 July 2021
-                        <svg className="-mr-1 ml-3 h-5 w-5 normal-text" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-12 h-5 w-5 normal-text" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" cap-rule="evenodd" />
                         </svg>
                     </button>
