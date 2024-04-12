@@ -3,31 +3,48 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --background-rgb: 242, 241, 240;
+  --text-color: 49, 49, 49;
+  --text-secondary: 144, 144, 144;
+  --foreground-rgb: 245, 153, 60;
+  --foreground-secondary: 110, 212, 212;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: rgb(var(--text-color));
+  background: rgb(var(--background-rgb));
+  height: 1080px;
+  width: 1920px;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .title {
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 112px;
+  }
+  .highlight-bg {
+    background: rgb(var(--foreground-rgb));
+  }
+  .highlight-bg-secondary {
+    background: rgb(var(--foreground-secondary));
+  }
+  .highlight-text {
+    color: rgb(var(--foreground-rgb));
+  }
+  .normal-text {
+    color: rgb(var(--text-color));
+  }
+  .text-secondary {
+    color: rgb(var(--text-secondary));
+  }
+  .line {
+    border-bottom: 1px solid rgb(var(--text-secondary));
+  }
+  .line-vertical {
+    border-left: 1px solid rgb(var(--text-secondary));
   }
 }
