@@ -6,6 +6,13 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  theme: {
+    extend: {
+      dropShadow: {
+        '4xl': '0px 24px 24px rgba(0, 0, 0, 0.5)',
+      },
+    },
+  },
   plugins: [],
 };
 export default config;
