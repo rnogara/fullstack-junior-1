@@ -44,4 +44,7 @@ body {
   .line {
     border-bottom: 1px solid rgb(var(--text-secondary));
   }
+  .line-vertical {
+    border-left: 1px solid rgb(var(--text-secondary));
+  }
 }
