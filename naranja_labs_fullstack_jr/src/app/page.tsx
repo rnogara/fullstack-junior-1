@@ -1,6 +1,7 @@
 import CarBanner from "./components/carBanner";
 import Footer from "./components/footer";
 import Header from "./components/header";
+import SearchBar from "./components/searchBar";
 import Title from "./components/title";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
           <Title />
           <CarBanner />
         </div>
+        <SearchBar />
       </section>
       <Footer />
     </main>
